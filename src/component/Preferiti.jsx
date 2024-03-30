@@ -15,6 +15,7 @@ function Preferiti() {
                    <img style={{width:"10rem",height:"15rem"}} src={e.Poster} alt="img"></img>
                  
                    <Button variant="danger" className="mt-1">Delete</Button>
+                   {/* a sto bottone glielo dobbiamo dire che deve fare al click?????ATTENTO AGLI IMPORT qualche suggerimento te lo puo dare il fratello Mycard ;) */}
                 </Col>)}
             </Row>
         </Container>
