@@ -8,7 +8,7 @@ function Preferiti() {
     return (<>
 
         <Container >
-            <Row className='h-100 border gy-2 gap-2'>
+            <Row className='h-100 border gy-2 gap-2 mt-2'>
                 <h1 className="display-4">Preferiti</h1>
                 {reduxstate.map((e,index) =>
                  <Col xs={5} key={index} className="border">

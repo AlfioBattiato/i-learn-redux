@@ -41,8 +41,8 @@ function MyMain(props) {
                 <h1 className="display-4">Romantic</h1>
 
                 {fetchResults[0]?.Search?.length > 0 && (
-                    fetchResults[0].Search.slice(0, 4).map((e, index) =>
-                        <Col xs={6} md={4} lg={3} key={index}>
+                    fetchResults[0].Search.slice(0, 8).map((e, index) =>
+                        <Col xs={6} md={4} lg={2} key={index}>
                             <MyCard Poster={e.Poster} titolo={e.Title} oggetto={e} />
                         </Col>
                     ))}
@@ -51,8 +51,8 @@ function MyMain(props) {
             <Row className='h-100 border mt-2 p-3'>
                 <h1 className="display-4">Titanic</h1>
                 {fetchResults[1]?.Search?.length > 0 && (
-                    fetchResults[1].Search.slice(0, 4).map((e, index) =>
-                        <Col xs={6} md={4} lg={3} key={index}>
+                    fetchResults[1].Search.slice(0, 8).map((e, index) =>
+                        <Col xs={6} md={4} lg={2} key={index}>
                             <MyCard Poster={e.Poster} titolo={e.Title} oggetto={e} />
                         </Col>
                     ))}

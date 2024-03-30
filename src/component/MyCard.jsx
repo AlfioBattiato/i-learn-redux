@@ -23,8 +23,7 @@ const myfunction=()=>{
         <Card.Text>
        
         </Card.Text>
-        <Button variant="primary">Go somewhere</Button>
-        <Button variant="danger" className='ms-2'
+        <Button variant="success" className='ms-2'
         onClick={()=>myfunction()}
         
         

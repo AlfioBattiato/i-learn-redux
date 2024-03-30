@@ -2,7 +2,7 @@ export const GET_MOVIE='GET_MOVIE'
 export const GET_DATA='GET_DATA'
 
 
-
+//quando chiamo il getMovie devo dare per forza un parametro....cerca doce chiamo questa funzione :D
 export const getMovie=(cosamidai)=>{
 return{
     type:GET_MOVIE,
@@ -10,7 +10,9 @@ return{
 }
 
 }
+//nel caso delle funzioni devi necessariamente usare la sintassi qui sotto(nota il return)
 export const getNewFetch=(nome)=>{
+    //per forza serve il dispatch e getstate!
 return(dispatch,getState)=>{
 
     fetch(`https://www.omdbapi.com/?apikey=96932c7f&s=${nome}`)

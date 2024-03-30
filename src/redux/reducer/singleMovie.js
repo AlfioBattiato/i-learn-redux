@@ -1,5 +1,5 @@
 import { GET_DATA, GET_MOVIE } from "../action";
-
+//lui è effettivamente lo stato iniziale del mio redux
 const initialState = {
     allMovies: [],
     fetch:[]
@@ -8,7 +8,9 @@ const initialState = {
 
 const singleMovie = function(state = initialState, action) {
     switch (action.type) {
+        //ovvero quando chiamiamo il GET_MOVIE che si trova sull action
         case GET_MOVIE:
+        //questo if e questa costante mi serve per controlare se esiste il film gia nel mio redux quando clicco il like
             const existingMovie = state.allMovies.find(movie => movie.imdbID === action.payload.imdbID
                 );
             if (existingMovie) {
@@ -19,6 +21,7 @@ const singleMovie = function(state = initialState, action) {
                     allMovies: [...state.allMovies, action.payload]
                 };
             }
+            //ovvero è quando chiamiamo il fetch sulla cartella action
         case GET_DATA:
                 return {
                     ...state,
