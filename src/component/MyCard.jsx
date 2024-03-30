@@ -8,6 +8,11 @@ function MyCard(props) {
 
 const dispatch=useDispatch()
 
+const myfunction=()=>{
+
+  dispatch(getMovie(props.oggetto))
+}
+
 
 
   return (
@@ -20,7 +25,7 @@ const dispatch=useDispatch()
         </Card.Text>
         <Button variant="primary">Go somewhere</Button>
         <Button variant="danger" className='ms-2'
-        onClick={()=>dispatch(getMovie(props.oggetto))}
+        onClick={()=>myfunction()}
         
         
         

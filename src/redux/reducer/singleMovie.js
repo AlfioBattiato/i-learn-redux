@@ -1,19 +1,33 @@
-import { GET_MOVIE } from "../action";
+import { GET_DATA, GET_MOVIE } from "../action";
 
+const initialState = {
+    allMovies: [],
+    fetch:[]
 
-const initialState={
-    allMovies:[]
 }
 
-
-const  singleMovie=function(state =initialState, action){
+const singleMovie = function(state = initialState, action) {
     switch (action.type) {
         case GET_MOVIE:
-            return{...state,
-                allMovies:[...state.allMovies,action.payload]
-
+            const existingMovie = state.allMovies.find(movie => movie.imdbID === action.payload.imdbID
+                );
+            if (existingMovie) {
+                return state;
+            } else {
+                return {
+                    ...state,
+                    allMovies: [...state.allMovies, action.payload]
+                };
             }
-        default :return state;
+        case GET_DATA:
+                return {
+                    ...state,
+                    fetch: [...state.fetch, action.payload]
+                };
+            
+        default:
+            return state;
     }
 }
-export default singleMovie
+
+export default singleMovie;

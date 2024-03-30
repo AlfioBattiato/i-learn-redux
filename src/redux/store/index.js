@@ -3,6 +3,7 @@ import singleMovie from '../reducer/singleMovie' // non serve /index, basta punt
 
 // configureStore è la funzione principale di redux, quella che GENERA lo stato condiviso
 
+
 const store = configureStore({
   reducer: singleMovie,
 })
