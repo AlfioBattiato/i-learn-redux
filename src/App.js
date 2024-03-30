@@ -7,6 +7,7 @@ import Preferiti from './component/Preferiti';
 
 
 function App() {
+
   return (
     <BrowserRouter>
       <MyNavbar></MyNavbar>
@@ -16,10 +17,10 @@ function App() {
           <Container fluid className='h-100'>
             <Row>
               <Col xs={12} md={3}>
-                <Preferiti></Preferiti>
+                <Preferiti ></Preferiti>
                 </Col>
               <Col xs={12} md={9}>
-                <MyMain ></MyMain>
+                <MyMain></MyMain>
               </Col>
             </Row>
 
