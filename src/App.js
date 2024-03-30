@@ -1,24 +1,37 @@
-import logo from './logo.svg';
-import './App.css';
+import './App.css'
+import { BrowserRouter, Routes, Route, Link } from 'react-router-dom'
+import { Col, Container, Row } from 'react-bootstrap'
+import MyNavbar from './component/MyNavbar';
+import MyMain from './component/MyMain';
+import Preferiti from './component/Preferiti';
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <MyNavbar></MyNavbar>
+      <Routes>
+        <Route path='/' element={
+
+          <Container fluid className='h-100'>
+            <Row>
+              <Col xs={12} md={3}>
+                <Preferiti></Preferiti>
+                </Col>
+              <Col xs={12} md={9}>
+                <MyMain ></MyMain>
+              </Col>
+            </Row>
+
+
+
+
+          </Container>
+
+
+        }></Route>
+      </Routes>
+    </BrowserRouter>
   );
 }
 
